@@ -1,0 +1,6 @@
+#! /bin/bash
+
+source ABS_PATH_TO_FOLDER/prognoza/env/bin/activate
+python3 ABS_PATH_TO_FOLDER/prognoza/prognoza.py
+deactivate
+
