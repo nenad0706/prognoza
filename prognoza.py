@@ -1,4 +1,3 @@
-#!/home/nenad/dev/scripts/prognoza/env/bin/python
 # -*- coding: UTF-8 -*-
 
 import bs4 as bs
@@ -100,9 +99,8 @@ def form_images_hourly():
 	for i in range(len(rainlist)):
 		hourlydata["images"] += form_image(rainlist[i], cloudslist[i]) 
 
-'''
-	prints left table 
-'''
+
+# prints left table in corresponding lines, or fills blank 
 def fill_or_print_general(current_line):
 	bgc = blk
 	fgc = wht
@@ -142,7 +140,6 @@ get_weather_hourly()
 form_images_hourly()
 
 # =========================================================== PRINT
-
 
 print()
 
@@ -204,8 +201,5 @@ print(left_indent + cl(hourlydata["hours"], wht, blk, 0))
 print("    " + cl("      ", wht, blk, 0) + cl(hourlydata["images"], wht, blu, 0))
 print("    " + cl(hourlydata["temp"], wht, blk, 0))
 print("    " + cl(hourlydata["rain"], wht, blk, 0))
-#print(clouds)
-
 
 print()
-#print(tempsati)
